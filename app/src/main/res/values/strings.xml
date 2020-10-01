@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Practi</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="loginhere">Already have an account? Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="newaccount">Create a new account? SignUp</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="course">course</string>
+    <string name="signup_teacher">SignUp Teacher</string>
+    <string name="create_a_new_account_professor">Create a New Account Professor?</string>
+</resources>
