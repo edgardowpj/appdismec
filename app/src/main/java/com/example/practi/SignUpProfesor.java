@@ -47,12 +47,13 @@ public class SignUpProfesor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String fullname,username,password,email,course;
+                final String fullname,username,password,email,course,tipe;
                 fullname= String.valueOf(textInputEditTextFullname.getText());
                 username= String.valueOf(textInputEditTextUsername.getText());
                 password= String.valueOf(textInputEditTextPassword.getText());
                 email= String.valueOf(textInputEditTextEmail.getText());
                 course= String.valueOf(textInputEditTextCourse.getText());
+                tipe="admin";
 
                 if(!fullname.equals("")&& !username.equals("") && !password.equals("") && !email.equals("") && !course.equals("")){
 
@@ -64,20 +65,22 @@ public class SignUpProfesor extends AppCompatActivity {
                         public void run() {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
-                            String[] field = new String[5];
+                            String[] field = new String[6];
 
                             field[0] = "username";
                             field[1] = "email";
                             field[2] = "password";
                             field[3] = "fullname";
                             field[4] = "course";
+                            field[5] = "tipe";
 
-                            String[] data = new String[5];
+                            String[] data = new String[6];
                             data[0] = username;
                             data[1] = email;
                             data[2] = password;
                             data[3] = fullname;
                             data[4] = course;
+                            data[5] = tipe;
                             PutData putData = new PutData("http://192.168.1.55/proyecto/signupProfesor.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {

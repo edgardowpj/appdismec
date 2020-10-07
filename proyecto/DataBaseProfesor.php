@@ -52,16 +52,17 @@ class DataBase
         return $login;
     }
 
-    function signUp($table, $fullname, $email, $username, $password, $course)
+    function signUp($table, $fullname, $email, $username, $password, $course, $tipe)
     {   
         $username = $this->prepareData($username);
         $email = $this->prepareData($email);
         $password = $this->prepareData($password);
         $fullname = $this->prepareData($fullname);
         $course = $this->prepareData($course);
+        $tipe = $this->prepareData($tipe);
         $password = password_hash($password, PASSWORD_DEFAULT);
         $this->sql =
-            "INSERT INTO " . $table . " (username, email, password, fullname, course) VALUES ('" . $username . "','" . $email . "','" . $password . "','" . $fullname . "','" . $course .  "')";
+            "INSERT INTO " . $table . " (username, email, password, fullname, course, tipe) VALUES ('" . $username . "','" . $email . "','" . $password . "','" . $fullname . "','" . $course . "','" . $tipe ."')";
         if (mysqli_query($this->connect, $this->sql)) {
             return true;
         } else return false;

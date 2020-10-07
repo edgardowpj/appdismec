@@ -80,18 +80,25 @@ public class Login extends AppCompatActivity {
                             PutData putData = new PutData("http://192.168.1.55/proyecto/login.php", "POST", field, data);
 
                             PutData putData2 = new PutData("http://192.168.1.55/proyecto/loginProfesor.php", "POST", field, data);
-                            if (putData.startPut()) {
-                                if (putData.onComplete()) {
+                            if (putData.startPut() && putData2.startPut()) {
+                                if (putData.onComplete() && putData2.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
                                     String result2 = putData2.getResult();
                                     if(result.equals("Login Success")){
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
                                         finish();
-                                    }else{
+                                    }else if(result2.equals("Login Success profesor")){
+                                        Toast.makeText(getApplicationContext(),result2,Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+
+                                    }else {
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),result2,Toast.LENGTH_SHORT).show();
                                     }
 
                                 }

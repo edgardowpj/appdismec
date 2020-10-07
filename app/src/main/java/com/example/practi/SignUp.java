@@ -23,6 +23,7 @@ public class SignUp extends AppCompatActivity {
     Button buttonSignUp;
     TextView textViewLogin;
     ProgressBar progressBar;
+    String Tipe="user";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +50,12 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String fullname,username,password,email;
+                final String fullname,username,password,email,tipe;
                 fullname= String.valueOf(textInputEditTextFullname.getText());
                 username= String.valueOf(textInputEditTextUsername.getText());
                 password= String.valueOf(textInputEditTextPassword.getText());
                 email= String.valueOf(textInputEditTextEmail.getText());
+                tipe="user";
 
                 if(!fullname.equals("")&& !username.equals("") && !password.equals("") && !email.equals("")){
 
@@ -65,18 +67,21 @@ public class SignUp extends AppCompatActivity {
                         public void run() {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
-                            String[] field = new String[4];
+                            String[] field = new String[5];
                             field[0] = "fullname";
                             field[1] = "username";
                             field[2] = "password";
                             field[3] = "email";
+                            field[4] = "tipe";
 
 
-                            String[] data = new String[4];
+                            String[] data = new String[5];
                             data[0] = fullname;
                             data[1] = username;
                             data[2] = password;
                             data[3] = email;
+                            data[4] = tipe;
+
                             PutData putData = new PutData("http://192.168.1.55/proyecto/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {

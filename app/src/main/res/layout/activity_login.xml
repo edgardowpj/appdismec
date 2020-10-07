@@ -14,7 +14,7 @@
         android:fontFamily="@font/poppinsbold"
         android:gravity="center"
         android:text="@string/login"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
