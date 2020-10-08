@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
