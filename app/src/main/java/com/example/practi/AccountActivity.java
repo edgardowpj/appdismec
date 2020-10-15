@@ -6,20 +6,38 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AccountActivity extends AppCompatActivity {
+
+    TextView tvid,tvname,tvemail,tvcontact,tvaddress;
+    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
+        //Initializing Views
+        tvid = findViewById(R.id.txtid);
+        tvname = findViewById(R.id.txtname);
+        tvemail = findViewById(R.id.txtemail);
+        tvcontact = findViewById(R.id.txcontact);
+        tvaddress = findViewById(R.id.txtaddress);
+
+        Intent intent =getIntent();
+        position = intent.getExtras().getInt("position");
+
+        tvid.setText("ID: "+FavoriteActivity.users.get(position).getId());
+        tvname.setText("Nombre: "+FavoriteActivity.users.get(position).getFullname());
+        tvemail.setText("Email: "+FavoriteActivity.users.get(position).getEmail());
+        tvcontact.setText("Username: "+FavoriteActivity.users.get(position).getUsername());
+        tvaddress.setText("Tipe: "+FavoriteActivity.users.get(position).getTipe());
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
         bottomNavigationView.setSelectedItemId(R.id.menuAccount);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

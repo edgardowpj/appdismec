@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtBienvenido=(TextView)findViewById(R.id.textUsername);
-        String usuario=getIntent().getStringExtra("users");
-        txtBienvenido.setText("¡ "+ usuario + "!");
+
 
        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
@@ -47,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
                        overridePendingTransition(0,0);
                        return true;
 
-                   case R.id.menuAccount:
+                /*   case R.id.menuAccount:
                        startActivity(new Intent(getApplicationContext(),AccountActivity.class));
                        overridePendingTransition(0,0);
-                       return true;
+                       return true;*/
 
                    case R.id.menuSettings:
                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
@@ -64,12 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
-
-    private void showSelectedFragment(Fragment fragment){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                .commit();
     }
 
 
