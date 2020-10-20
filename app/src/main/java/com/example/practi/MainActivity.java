@@ -17,15 +17,18 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String nombres="fullname";
+    public static Test test=new Test();
+    Test test2;
+    String nombres;
     TextView txtBienvenido;
-    BottomNavigationView test;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
+        txtBienvenido=(TextView)findViewById(R.id.textUsername);
 
        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 

@@ -29,8 +29,8 @@ public class StudentActivity extends AppCompatActivity {
                     case R.id.menuHome2:
                         return true;
 
-                    case R.id.menuSettings:
-                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+                    case R.id.menuSettings2:
+                        startActivity(new Intent(getApplicationContext(),SettingsStudentActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

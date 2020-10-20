@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SettingsActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,5 +50,11 @@ public class SettingsActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void ExitToTheApp(View view){
+        Intent intent = new Intent(this, Login.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -31,11 +32,17 @@ public class SettingsStudentActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.menuSettings:
+                    case R.id.menuSettings2:
                         return true;
                 }
                 return false;
             }
         });
+    }
+
+    public void ExitToTheApp(View view){
+        Intent intent = new Intent(this, Login.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

@@ -21,6 +21,8 @@ public class SignUpProfesor extends AppCompatActivity {
     Button buttonSignUp;
     TextView textViewLogin;
     ProgressBar progressBar;
+    public static Test test=new Test();
+    Test test2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class SignUpProfesor extends AppCompatActivity {
                 password= String.valueOf(textInputEditTextPassword.getText());
                 email= String.valueOf(textInputEditTextEmail.getText());
                 course= String.valueOf(textInputEditTextCourse.getText());
+                test2=new  Test(course);
                 tipe="admin";
 
                 if(!fullname.equals("")&& !username.equals("") && !password.equals("") && !email.equals("") && !course.equals("")){

@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="@string/this_is_your"
+            android:text="Here Enter a"
             android:textColor="@color/colorWhite"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="15dp"
-            android:text="@string/account"
+            android:text="USER"
             android:textColor="@color/colorWhite"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -62,16 +62,19 @@
         android:overScrollMode="never"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/layoutGoal"
-                android:layout_width="316dp"
-                android:layout_height="640dp"
+                android:layout_width="345dp"
+                android:layout_height="214dp"
                 android:layout_marginTop="22dp"
                 android:background="@drawable/white_rectangle_background"
 
@@ -84,60 +87,161 @@
 
 
                 <TextView
+                    android:id="@+id/txtid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="ID:"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/txtid"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/txtname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="Name:"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/txtname"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/txtemail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="Email:"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/txtemail"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/txcontact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="Username:"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/txcontact"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/txtaddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="Tipe:"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/txtaddress"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutGoal2"
+                android:layout_width="345dp"
+                android:layout_height="214dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle_background"
+
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutGoal">
+
+
+                <EditText
+                    android:id="@+id/txtemail2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:hint="Curse Code:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txcontact2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Username:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnLogin2"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="INSERT"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txcontact2"></Button>
 
 
             </LinearLayout>
 
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/trending_background"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="@id/layoutGoal"
+                app:layout_constraintStart_toStartOf="@+id/layoutGoal"
+                app:layout_constraintTop_toBottomOf="@+id/layoutGoal2">
+
+                <TextView
+                    android:id="@+id/textTrending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_rectangle_background"
+                    android:paddingStart="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="2dp"
+                    android:text="INFO"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_favorite_border"
+                    android:tint="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTrending"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/textTrending"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:text="@string/info"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/textTrending"></TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

@@ -12,12 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SettingsStudentActivity"></activity>
-        <activity android:name=".StudentActivity" />
-        <activity android:name=".AccountActivity" />
-        <activity android:name=".FavoriteActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".SettingsStudentActivity"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".StudentActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AccountActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".FavoriteActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".SettingsActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">

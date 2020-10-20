@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".MainActivity">
-
+    tools:context=".AccountActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
@@ -21,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="Setting"
+            android:text="@string/this_is_your"
             android:textColor="@color/colorWhite"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="15dp"
-            android:text="Student"
+            android:text="Settings"
             android:textColor="@color/colorWhite"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -46,15 +45,11 @@
             android:layout_height="30dp"
             android:layout_marginEnd="15dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_menu"
+            android:src="@drawable/ic_settings"
             android:tint="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/textHello"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textHello"></ImageView>
-
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -70,13 +65,50 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:id="@+id/layoutGoal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="96dp"
+                android:background="@drawable/white_rectangle_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/exit"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:onClick="ExitToTheApp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_exit"
+                    ></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="EXIT"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></TextView>
 
 
-
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     </ScrollView>
+
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -90,10 +122,5 @@
         app:menu="@menu/navigation_menu_student">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

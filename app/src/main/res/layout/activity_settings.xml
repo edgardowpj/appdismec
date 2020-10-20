@@ -51,10 +51,65 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textHello"></ImageView>
 
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="96dp"
+                    android:background="@drawable/white_rectangle_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/exit"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:onClick="ExitToTheApp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_exit"
+                        ></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="EXIT"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

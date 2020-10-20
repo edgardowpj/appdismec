@@ -55,7 +55,7 @@ public class FavoriteActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 ProgressDialog progressDialog = new ProgressDialog(view.getContext());
 
-                CharSequence[] dialogItem = {"Mostrar datos"};
+                CharSequence[] dialogItem = {"Agregar"};
                 builder.setTitle(users.get(position).getFullname());
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
                     @Override
@@ -69,6 +69,7 @@ public class FavoriteActivity extends AppCompatActivity {
                                         .putExtra("position",position));
 
                                 break;
+
                         }
                     }
                 });
