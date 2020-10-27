@@ -34,7 +34,10 @@ public class FavoriteActivity extends AppCompatActivity {
     ListView list;
     Add add;
     public static ArrayList<Users>users=new ArrayList<>();
+
     String url="http://192.168.1.55/proyecto/Listar.php";
+
+
     Users users2;
     TextView tvid,tvfulname,tvemail,tvusername,tvtipe;
     int position;
@@ -159,6 +162,9 @@ public class FavoriteActivity extends AppCompatActivity {
 
 
     }
+
+
+
 
 
 }

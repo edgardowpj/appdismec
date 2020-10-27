@@ -12,13 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SettingsStudentActivity"
-                android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".StudentActivity" android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AccountActivity" android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".FavoriteActivity" android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".SettingsActivity" android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".QuestionsActivity"></activity>
+        <activity android:name=".SetActivity" />
+        <activity android:name=".CategoriesActivity" />
+        <activity android:name=".QuizStudent" />
+        <activity
+            android:name=".SettingsStudentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StudentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FavoriteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">

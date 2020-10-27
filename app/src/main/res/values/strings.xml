@@ -35,5 +35,7 @@
     <string name="settings">Settings</string>
     <string name="this_is_your">This is Your</string>
     <string name="info">At the bottom of this section you will place the Username of the user and his code of his registered class, Please do not make a mistake</string>
+    <string name="quiz">Quiz</string>
+    <string name="sets">Sets</string>
 
 </resources>

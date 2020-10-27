@@ -33,6 +33,7 @@ public class AccountActivity extends AppCompatActivity {
     int position;
     Button btn_insert;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +53,7 @@ public class AccountActivity extends AppCompatActivity {
         Intent intent =getIntent();
         position = intent.getExtras().getInt("position");
 
+        tvusername.setText(FavoriteActivity.users.get(position).getUsername());
         tvid.setText("Id: "+FavoriteActivity.users.get(position).getId());
         tvname.setText("Fullname: "+FavoriteActivity.users.get(position).getFullname());
         tvemail.setText("Email: "+FavoriteActivity.users.get(position).getEmail());

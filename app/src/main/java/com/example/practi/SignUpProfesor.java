@@ -55,7 +55,7 @@ public class SignUpProfesor extends AppCompatActivity {
                 password= String.valueOf(textInputEditTextPassword.getText());
                 email= String.valueOf(textInputEditTextEmail.getText());
                 course= String.valueOf(textInputEditTextCourse.getText());
-                test2=new  Test(course);
+
                 tipe="admin";
 
                 if(!fullname.equals("")&& !username.equals("") && !password.equals("") && !email.equals("") && !course.equals("")){
