@@ -37,5 +37,7 @@
     <string name="info">At the bottom of this section you will place the Username of the user and his code of his registered class, Please do not make a mistake</string>
     <string name="quiz">Quiz</string>
     <string name="sets">Sets</string>
+    <string name="enter_your_username">Enter Your Username</string>
+    <string name="add_exam">ADD EXAM</string>
 
 </resources>

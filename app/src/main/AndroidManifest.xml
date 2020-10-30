@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".QuestionsActivity"></activity>
+        <activity android:name=".InsertExamActivity"></activity>
+        <activity android:name=".QuestionsActivity" />
         <activity android:name=".SetActivity" />
         <activity android:name=".CategoriesActivity" />
         <activity android:name=".QuizStudent" />

@@ -6,27 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".QuizStudent">
 
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorPrimary"
         android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/Star_Btn"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/validar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="143dp"
+            android:layout_height="66dp"
             android:layout_gravity="center"
             android:text="@string/quiz"
             android:textColor="@color/colorWhite"
             android:textSize="42dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
 
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/validar"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/enter_your_username"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/username"
+        app:layout_constraintBottom_toTopOf="@+id/Star_Btn"
+        app:layout_constraintEnd_toEndOf="@id/validar"
+        app:layout_constraintStart_toStartOf="@id/validar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_user"
+            android:fontFamily="@font/poppinsbold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/Star_Btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <Button
         android:id="@+id/Star_Btn"
@@ -41,6 +90,8 @@
         app:layout_constraintBottom_toTopOf="@+id/cancel_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
     <Button
         android:id="@+id/cancel_btn"

@@ -152,10 +152,6 @@ public class AccountActivity extends AppCompatActivity {
 
                     params.put("username",username);
                     params.put("email",email);
-
-
-
-
                     return params;
                 }
             };

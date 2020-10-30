@@ -88,8 +88,7 @@
                         android:onClick="ExitToTheApp"
                         android:contentDescription="@string/app_name"
                         android:padding="8dp"
-                        android:src="@drawable/ic_exit"
-                        ></ImageView>
+                        android:src="@drawable/ic_exit"/>
 
                     <TextView
                         android:layout_width="match_parent"
