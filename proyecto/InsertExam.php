@@ -20,7 +20,7 @@
             }
 
         $path="uploads/$id.png";
-        $actualpath="http://192.168.1.55/proyecto/uploads/$path";
+        $actualpath="http://192.168.1.66/proyecto/uploads/$path";
 
         $sql="INSERT INTO exams (textexam,a,b,c,d,correctAnswer,img) VALUES ('$textexam','$a','$b','$c','$d','$correctAnswer','$actualpath')";
 

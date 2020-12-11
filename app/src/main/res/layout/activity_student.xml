@@ -70,37 +70,72 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
             <LinearLayout
                 android:id="@+id/layoutGoal"
-                android:layout_width="260dp"
-                android:layout_height="240dp"
-                android:layout_marginTop="136dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layoutGoal2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:onClick="Quiz2"
+                    android:src="@drawable/menu"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Quiz"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutGoal2"
+                android:layout_width="194dp"
+                android:layout_height="169dp"
+                android:layout_marginTop="22dp"
                 android:background="@drawable/white_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layoutGoal"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="134dp"
-                    android:layout_height="119dp"
-                    android:layout_margin="20dp"
-                    android:contentDescription="@string/app_name"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
                     android:clickable="true"
-                    android:onClick="Quiz"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="SeeNotes"
                     android:padding="8dp"
-                    android:src="@drawable/home"></ImageView>
+                    android:src="@drawable/ic_school"></ImageView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Options"
+                    android:text="See Notes"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
                     android:textStyle="bold"></TextView>

@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String fullname,username,password,email;
+                final String username,password;
                 username= String.valueOf(textInputEditTextUsername.getText());
                 password= String.valueOf(textInputEditTextPassword.getText());
 
@@ -80,27 +80,31 @@ public class Login extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = username;
                             data[1] = password;
-                            PutData putData = new PutData("http://192.168.1.55/proyecto/login.php", "POST", field, data);
-
-                            PutData putData2 = new PutData("http://192.168.1.55/proyecto/loginProfesor.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.66/proyecto/login.php", "POST", field, data);
+                            Log.d("Send1","Succes");
+                            PutData putData2 = new PutData("http://192.168.1.66/proyecto/loginProfesor.php", "POST", field, data);
+                            Log.d("Send2","Succes");
                             if (putData.startPut() && putData2.startPut()) {
                                 if (putData.onComplete() && putData2.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
                                     String result2 = putData2.getResult();
+                                    Log.d("Username",username);
+                                    Log.d("Password",password);
                                     if(result.equals("Login Success")){
                                         Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), StudentActivity.class);
                                         startActivity(intent);
                                         finish();
-                                    }else if(result2.equals("Login Success profesor")){
+                                    }else {
+                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
+                                    }
+                                    if(result2.equals("Login Success profesor")){
                                         Toast.makeText(getApplicationContext(),result2,Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
                                         finish();
-
                                     }else {
-                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
                                         Toast.makeText(getApplicationContext(),result2,Toast.LENGTH_SHORT).show();
                                     }
 

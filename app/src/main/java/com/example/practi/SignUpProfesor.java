@@ -84,7 +84,7 @@ public class SignUpProfesor extends AppCompatActivity {
                             data[3] = fullname;
                             data[4] = course;
                             data[5] = tipe;
-                            PutData putData = new PutData("http://192.168.1.55/proyecto/signupProfesor.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.66/proyecto/signupProfesor.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);

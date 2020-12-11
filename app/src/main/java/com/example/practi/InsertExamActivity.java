@@ -35,7 +35,7 @@ public class InsertExamActivity extends AppCompatActivity implements View.OnClic
     private EditText editTextTexto,a,b,c,d,CorrectAnswer;
     private Bitmap bitmap;
     private int PICK_IMAGE_REQUEST=1;
-    private String url="http://192.168.1.55/proyecto/InsertExam.php";
+    private String url="http://192.168.1.66/proyecto/InsertExam.php";
 
     private String Keytexto="textexam";
     private String KeytextoA = "a";

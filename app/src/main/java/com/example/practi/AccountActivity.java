@@ -119,7 +119,7 @@ public class AccountActivity extends AppCompatActivity {
             return;
         }else{
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.1.55/proyecto/insert.php",
+            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.1.66/proyecto/insert.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

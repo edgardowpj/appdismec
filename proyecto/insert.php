@@ -4,10 +4,10 @@
     
     
      $username = $_POST["username"];
-     $nameofcourse = $_POST["email"];
+     $email = $_POST["email"];
     
      
-     $sql = "INSERT INTO course(username,nameofcourse) VALUES ('$username','$nameofcourse')";
+     $sql = "INSERT INTO course(username,email) VALUES ('$username','$email')";
      
      $result = mysqli_query($connection,$sql);
      

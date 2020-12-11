@@ -3,18 +3,18 @@
 $conexion=mysqli_connect("localhost","root","","login");
 
 $result=array();
-$result['users']=array();
-$select="SELECT * FROM users";
+$result['notes']=array();
+$select="SELECT * FROM notes";
 $show= mysqli_query($conexion,$select);
 
 while($row = mysqli_fetch_array($show)){
     $index['id']=$row['0'];
-    $index['fullname']=$row['1'];
-    $index['email']=$row['2'];
-    $index['username']=$row['3'];
-    $index['tipe']=$row['5'];
+    $index['username']=$row['1'];
+    $index['note']=$row['2'];
+    $index['time']=$row['3'];
+    $index['rank']=$row['4'];
 
-    array_push($result['users'],$index);
+    array_push($result['notes'],$index);
 }
 
 $result['succes']="1";

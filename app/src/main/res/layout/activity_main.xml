@@ -159,6 +159,8 @@
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
+                    android:clickable="true"
+                    android:onClick="ListStudent"
                     android:padding="8dp"
                     android:src="@drawable/ic_person_add"></ImageView>
 

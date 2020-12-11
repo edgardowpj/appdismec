@@ -43,10 +43,8 @@ public class MainActivity extends AppCompatActivity {
                    case R.id.menuHome:
                        return true;
 
-                   case R.id.menuFavorite:
-                       startActivity(new Intent(getApplicationContext(),FavoriteActivity.class));
-                       overridePendingTransition(0,0);
-                       return true;
+                 /*  case R.id.menuFavorite:
+                       return true;*/
 
                 /*   case R.id.menuAccount:
                        startActivity(new Intent(getApplicationContext(),AccountActivity.class));
@@ -69,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void AddExam(View view){
         Intent intent = new Intent(this, InsertExamActivity.class);
+        startActivity(intent);
+    }
+    public void ListStudent(View view){
+        Intent intent = new Intent(this, FavoriteActivity.class);
         startActivity(intent);
     }
 

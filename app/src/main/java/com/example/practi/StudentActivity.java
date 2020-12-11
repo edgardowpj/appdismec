@@ -40,9 +40,14 @@ public class StudentActivity extends AppCompatActivity {
         });
     }
 
-    public void Quiz(View view){
+    public void Quiz2(View view){
         Intent intent = new Intent(this, QuizStudent.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    public void SeeNotes(View view){
+        Intent intent= new Intent(this, Seenotes.class);
         startActivity(intent);
     }
 

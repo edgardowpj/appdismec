@@ -56,7 +56,7 @@ public class QuizStudent extends AppCompatActivity {
                             String[] data = new String[1];
                             data[0] = username;
 
-                            PutData putData = new PutData("http://192.168.1.55/proyecto/ValidarUserToExam.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.1.66/proyecto/ValidarUserToExam.php", "POST", field, data);
 
 
                             if (putData.startPut()) {

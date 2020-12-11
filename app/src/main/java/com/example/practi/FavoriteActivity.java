@@ -34,14 +34,8 @@ public class FavoriteActivity extends AppCompatActivity {
     ListView list;
     Add add;
     public static ArrayList<Users>users=new ArrayList<>();
-
-    String url="http://192.168.1.55/proyecto/Listar.php";
-
-
+    String url="http://192.168.1.66/proyecto/Listar.php";
     Users users2;
-    TextView tvid,tvfulname,tvemail,tvusername,tvtipe;
-    int position;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +51,6 @@ public class FavoriteActivity extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 ProgressDialog progressDialog = new ProgressDialog(view.getContext());
-
                 CharSequence[] dialogItem = {"Agregar"};
                 builder.setTitle(users.get(position).getFullname());
                 builder.setItems(dialogItem, new DialogInterface.OnClickListener() {
@@ -65,31 +58,19 @@ public class FavoriteActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int i) {
 
                         switch (i){
-
                             case 0:
-
                                 startActivity(new Intent(getApplicationContext(), AccountActivity.class)
                                         .putExtra("position",position));
-
                                 break;
-
                         }
                     }
                 });
-
-
                 builder.create().show();
-
-
             }
         });
 
         ShowDates();
-
-
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.menuFavorite);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
