@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -47,8 +48,7 @@ public class StudentActivity extends AppCompatActivity {
     }
 
     public void SeeNotes(View view){
-        Intent intent= new Intent(this, Seenotes.class);
-        startActivity(intent);
+        Toast.makeText(this, "####", Toast.LENGTH_SHORT).show();
     }
 
 

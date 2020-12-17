@@ -65,10 +65,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     public void AddExam(View view){
-        Intent intent = new Intent(this, InsertExamActivity.class);
+       /* Intent intent = new Intent(this, InsertExamActivity.class);
+        startActivity(intent);*/
+
+        Intent intent = new Intent(this, InsertExamnAvancedActivity.class);
         startActivity(intent);
+
+
     }
+
+
+
     public void ListStudent(View view){
         Intent intent = new Intent(this, FavoriteActivity.class);
         startActivity(intent);
