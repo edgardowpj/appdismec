@@ -8,3 +8,5 @@ con la base de datos que estamos manejando que Es MYsql.
 Se le añadio una nueva interfaz a la aplicacion.
 Base de datos implementada en codigo fuente.
 Bug de login resueltos.
+
+Se agrego para poder suvir pdf.
