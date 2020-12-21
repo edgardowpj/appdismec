@@ -4,7 +4,7 @@
     $con = mysqli_connect($HOST,$USER,$PASSWORD,$DB_NAME);
 
 
-    $encodePDF = $_POST['PDF'];
+    $encodePDF = $_POST['PY'];
 
 
     $sql="SELECT id FROM documentsPDF ORDER BY id ASC";
@@ -16,8 +16,8 @@
         }
 
 
-    $pdfTitle = "http://192.168.1.66/proyecto/PDFS/$id.pdf";
-    $pdfLocation = "PDFS/$id.pdf";
+    $pdfTitle = "MyPY";
+    $pdfLocation = "PDFS/$id.py";
 
     $sqlQuery = "INSERT INTO `documentsPDF`(`title`, `location`) VALUES ('$pdfTitle','$pdfLocation')";
 

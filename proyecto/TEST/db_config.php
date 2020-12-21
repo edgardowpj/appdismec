@@ -3,6 +3,6 @@
     $HOST = "localhost";
     $USER = "root";
     $PASSWORD = "";
-    $DB_NAME = "login";
+    $DB_NAME = "testupload";
 
 ?>

@@ -3,10 +3,12 @@ package com.example.practi;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -60,11 +62,16 @@ public class AvancedQuizActivity extends AppCompatActivity {
 
 
     private void uploadDocument() {
-
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("cargando...");
         Call<ResponsePOJO> call = RetrofitClient.getInstance().getAPI().uploadDocument(encodedPDF);
         call.enqueue(new Callback<ResponsePOJO>() {
             @Override
             public void onResponse(Call<ResponsePOJO> call, Response<ResponsePOJO> response) {
+                progressDialog.show();
+                Pass();
+                Log.d("Test","Passed");
+                progressDialog.dismiss();
                 Toast.makeText(AvancedQuizActivity.this, response.body().getRemarks(), Toast.LENGTH_SHORT).show();
             }
 
@@ -74,6 +81,11 @@ public class AvancedQuizActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void Pass(){
+    Intent intent = new Intent(this, MainActivity.class);
+    startActivity(intent);
     }
 
 

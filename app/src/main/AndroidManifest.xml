@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AvancedQuizActivity"></activity>
+        <activity android:name=".ListPDFActivity"></activity>
+        <activity android:name=".PdfViewerActivity" />
+        <activity android:name=".AvancedQuizActivity" />
         <activity android:name=".InsertExamnAvancedActivity" />
         <activity android:name=".InsertExamActivity" />
         <activity android:name=".QuestionsActivity" />

@@ -19,9 +19,7 @@ public class StudentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView2);
-
         bottomNavigationView.setSelectedItemId(R.id.menuHome2);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -48,7 +46,9 @@ public class StudentActivity extends AppCompatActivity {
     }
 
     public void SeeNotes(View view){
-        Toast.makeText(this, "####", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ListPDFActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 
 

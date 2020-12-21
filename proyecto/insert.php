@@ -16,7 +16,7 @@
         
      }
      else{
-         echo "Failed";
+         echo "Failed, Because the username is register";
      }
      mysqli_close($connection);
      
