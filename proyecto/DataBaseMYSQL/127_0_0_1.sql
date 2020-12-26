@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-12-2020 a las 16:11:44
+-- Tiempo de generación: 11-12-2020 a las 15:04:34
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `login`
 --
+CREATE DATABASE IF NOT EXISTS `login` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `login`;
 
 -- --------------------------------------------------------
 
@@ -40,30 +42,7 @@ CREATE TABLE `course` (
 INSERT INTO `course` (`id`, `username`, `email`) VALUES
 (1, '', ''),
 (2, 'users@users.com', 'admib'),
-(3, 'ElManotas', 'HCD3'),
-(7, 'yo', 'tret');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `documentspdf`
---
-
-CREATE TABLE `documentspdf` (
-  `id` int(100) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `location` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `documentspdf`
---
-
-INSERT INTO `documentspdf` (`id`, `title`, `location`) VALUES
-(14, 'http://192.168.1.66/proyecto/PDFS/0.pdf', 'PDFS/0.pdf'),
-(15, 'http://192.168.1.66/proyecto/PDFS/14.pdf', 'PDFS/14.pdf'),
-(16, 'http://192.168.1.66/proyecto/PDFS/15.pdf', 'PDFS/15.pdf'),
-(17, 'http://192.168.1.66/proyecto/PDFS/16.pdf', 'PDFS/16.pdf');
+(3, 'ElManotas', 'HCD3');
 
 -- --------------------------------------------------------
 
@@ -174,12 +153,6 @@ ALTER TABLE `course`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indices de la tabla `documentspdf`
---
-ALTER TABLE `documentspdf`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `exams`
 --
 ALTER TABLE `exams`
@@ -216,13 +189,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `course`
 --
 ALTER TABLE `course`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT de la tabla `documentspdf`
---
-ALTER TABLE `documentspdf`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `exams`

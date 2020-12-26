@@ -6,7 +6,7 @@ public class Test {
     public Test() {
     }
 
-    public Test(String id, String fullname, String username, String email, String tipe, String course) {
+    public Test(String id, String username, String email, String fullname, String course, String tipe) {
         this.id = id;
         this.fullname = fullname;
         this.username = username;

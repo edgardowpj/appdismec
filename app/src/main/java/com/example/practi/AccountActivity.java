@@ -119,6 +119,7 @@ public class AccountActivity extends AppCompatActivity {
             return;
         }else{
             progressDialog.show();
+            final Intent intent = new Intent(this, MainActivity.class);
             StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.1.66/proyecto/insert.php",
                     new Response.Listener<String>() {
                         @Override
@@ -127,8 +128,8 @@ public class AccountActivity extends AppCompatActivity {
                             if(response.equalsIgnoreCase("Data Inserted")){
 
                                 Toast.makeText(AccountActivity.this, "Datos insertados", Toast.LENGTH_SHORT).show();
-
                                 progressDialog.dismiss();
+                                startActivity(intent);
                             }
                             else{
                                 Toast.makeText(AccountActivity.this, response, Toast.LENGTH_SHORT).show();
