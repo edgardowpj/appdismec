@@ -38,13 +38,30 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/enter_your_username"
+        android:text="Enter Your Password"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/validar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/validar2"
+        android:layout_width="414dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="Name"
         android:textColor="@android:color/black"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -53,18 +70,21 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="232dp"
         android:layout_marginRight="30dp"
-        android:hint="@string/username"
+        android:hint="@string/password"
         app:layout_constraintBottom_toTopOf="@+id/Star_Btn"
         app:layout_constraintEnd_toEndOf="@id/validar"
         app:layout_constraintStart_toStartOf="@id/validar"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/usernameLogin"
+            android:id="@+id/passwordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_user"
-            android:fontFamily="@font/poppinsbold" />
+            android:drawableRight="@drawable/ic_lock"
+            android:fontFamily="@font/poppinsbold"
+            android:inputType="textPassword" />
+
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar

@@ -52,7 +52,6 @@ public class StudentActivity extends AppCompatActivity {
 
     public void SeeNotes(View view){
         Intent intent = new Intent(this, ListPDFActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
